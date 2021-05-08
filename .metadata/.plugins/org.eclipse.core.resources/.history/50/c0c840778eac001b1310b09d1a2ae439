@@ -1,0 +1,15 @@
+package com.cg;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+//it minimize the annotations
+// it eqivalent to @Configuration + @Componentscan +@EnableAutoConfiguration+@Propertysource
+public class BeanInjectionBootApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(BeanInjectionBootApplication.class, args);
+	}
+
+}

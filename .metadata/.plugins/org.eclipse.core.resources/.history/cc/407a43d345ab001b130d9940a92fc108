@@ -1,0 +1,49 @@
+package com.cg.client;
+
+import java.time.LocalDate;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+import com.cg.entity.Emp;
+
+public class AddEmployee {
+	public static void main(String[] args) {
+
+		Emp emp =new Emp();
+		emp.setEmpId(1001);
+		emp.setEmpName("ram Kumar");
+		emp.setEmpSal(45000.0);
+		emp.setEmpDept("hr");
+		emp.setempDoj(LocalDate.of(2016,06,21));
+		
+		Emp emp1 =new Emp();
+//		emp1.setEmpId(1003);
+		emp1.setEmpName("ravi Roy");
+		emp1.setEmpSal(45000.0);
+		emp1.setEmpDept("Manager");
+		emp1.setempDoj(LocalDate.of(2016,06,21));
+		
+		EntityManagerFactory emf =Persistence.createEntityManagerFactory("JPA-CRUD");
+		EntityManager em=emf.createEntityManager();
+		EntityTransaction tx = null;
+		try {
+			tx = em.getTransaction();
+			tx.begin();
+			em.persist(emp1);
+			tx.commit();
+			System.out.println("Row Inserted");
+		}catch(Exception e) {
+			System.out.println(e.getMessage());
+			if(tx!=null) tx.rollback();
+		}
+	
+//	EntityManagerFactory fac1 = Persistence.createEntityManagerFactory("JPA-CRUD");
+	em.close();
+	emf.close();
+//	System.out.println("table created");
+	}
+}
+

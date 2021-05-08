@@ -1,0 +1,31 @@
+package com.cg;
+
+public class Account {
+	private Integer accountId;
+	private String custName;
+	private Double balance;
+	public Integer getAccountId() {
+		return accountId;
+	}
+	public void setAccountId(Integer accountId) {
+		this.accountId = accountId;
+	}
+	public String getCustName() {
+		return custName;
+	}
+	public void setCustName(String custName) {
+		this.custName = custName;
+	}
+	public Double getBalance() {
+		return balance;
+	}
+	public void setBalance(Double balance) {
+		this.balance = balance;
+	}
+	@Override
+	public String toString() {
+		return  accountId + " " + custName + " " + balance;
+	}
+	
+
+}

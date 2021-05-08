@@ -1,0 +1,9 @@
+driver=com.mysql.jdbc.Driver
+url=jdbc:mysql://localhost:3306/cg
+uname=root
+pwd=winner
+
+hbm2ddl=update
+showsql=true
+formatsql=true
+dialect=org.hibernate.dialect.MySQLDialect

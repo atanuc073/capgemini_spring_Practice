@@ -1,0 +1,30 @@
+package com.cg.dao;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import org.springframework.stereotype.Repository;
+
+import com.cg.entity.Emp;
+
+@Repository("mydao")
+public class EmpDaoImpl implements IEmpDao{
+	
+	@PersistenceContext
+	private EntityManager em;
+
+	@Override
+	public List<Emp> viewEmployee() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Emp addEmployee(Emp emp) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

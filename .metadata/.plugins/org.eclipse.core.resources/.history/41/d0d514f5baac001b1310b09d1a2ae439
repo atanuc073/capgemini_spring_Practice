@@ -1,0 +1,32 @@
+package com.cg.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.cg.dto.EmpDto;
+import com.cg.entity.Emp;
+import com.cg.exceptions.DeptException;
+import com.cg.exceptions.EmpNotFoundException;
+@Service("myser")
+public class EmpServiceImpl implements IEmpService{
+
+	@Override
+	public Integer addEmployee(EmpDto empdto) throws DeptException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Emp> viewEmployee() throws EmpNotFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Emp viewEmployee(int eid) throws EmpNotFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,9 @@
+driver=com.mysql.jdbc.Driver
+url=jdbc:mysql://localhost:3306/cg
+uname=system
+pwd=govind
+
+hbm2ddl=update
+showsql=true
+formatsql=true
+dialect=org.hibernate.dialect.Oracle10gDialect

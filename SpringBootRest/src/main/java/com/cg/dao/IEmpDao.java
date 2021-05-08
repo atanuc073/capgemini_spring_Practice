@@ -1,0 +1,21 @@
+package com.cg.dao;
+
+import java.time.LocalDate;
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+
+import com.cg.entity.Emp;
+
+@Repository
+public interface IEmpDao extends JpaRepository<Emp,Integer>{
+//if your interface extends JpaRepository then only <which class,data type>
+	@Query("from Emp e inner join fetch e.dept d where d.deptName = :dname ")
+	public List<Emp> viewEmployee(@Param("dname")String deptName);
+	// custom method custom query
+	@Query("from Emp e inner join fetch e.dept d where e.empDoj>=:startdoj and e.empDoj<=:enddoj")
+	public List<Emp> viewEmployee(@Param("startdoj")LocalDate startdate,@Param("enddoj") LocalDate enddate);
+}

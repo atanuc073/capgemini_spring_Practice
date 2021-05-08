@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;LDTConverter.java&apos; to &apos;JpqlDemo/src/com.cg.client&apos;&#x0A;- Original project: &apos;JpqlDemo&apos;&#x0A;- Destination element: &apos;JpqlDemo/src/com.cg.client&apos;&#x0A;- Original element: &apos;com.cg.entity.LDTConverter.java&apos;" description="Copy compilation unit" destination="/src&lt;com.cg.client" element1="/src&lt;com.cg.entity{LDTConverter.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1619963137961" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,19 @@
+package com.cg.web;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+import com.cg.dto.ErrorMessage;
+import com.cg.exceptions.EmpNotFoundException;
+// Global exception Handler
+@RestControllerAdvice
+public class EmpAdvice {
+	@ExceptionHandler(EmpNotFoundException.class)
+	@ResponseStatus(code = HttpStatus.NOT_FOUND)
+	public ErrorMessage handleExceptionEmpNotFound(EmpNotFoundException ex) {
+		return new ErrorMessage(HttpStatus.NOT_FOUND.toString(),ex.getMessage());
+	}
+
+}

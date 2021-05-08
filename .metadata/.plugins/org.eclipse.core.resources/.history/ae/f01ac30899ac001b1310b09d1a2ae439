@@ -1,0 +1,28 @@
+package com.cg.client;
+
+import java.util.Arrays;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
+
+import com.cg.entity.Emp;
+
+public class AggregationDemo {
+
+	public static void main(String[] args) {
+		List<String> lst =Arrays.asList("hr","production");
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("JPA-CRUD");
+		EntityManager em =emf.createEntityManager();
+		String jpql = "select sum(empSal),avg(empSal),from Emp";
+		TypedQuery<Emp> qry = em.createQuery(jpql,Emp.class);
+		List<Emp> elist= qry.getResultList();
+		em.close();
+		emf.close();
+		elist.forEach(System.out :: println);
+	}
+	
+
+}

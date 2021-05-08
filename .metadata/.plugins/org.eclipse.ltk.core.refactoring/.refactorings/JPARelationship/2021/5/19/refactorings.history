@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.cg.entity&apos; to &apos;SpringJpaAnnotation/src&apos;&#x0A;- Original project: &apos;JPARelationship&apos;&#x0A;- Destination element: &apos;SpringJpaAnnotation/src&apos;&#x0A;- Original element: &apos;JPARelationship/src/com.cg.entity&apos;" description="Copy package" destination="=SpringJpaAnnotation/src" element1="/src&lt;com.cg.entity" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1620026305130" version="1.0"/>
+</session>

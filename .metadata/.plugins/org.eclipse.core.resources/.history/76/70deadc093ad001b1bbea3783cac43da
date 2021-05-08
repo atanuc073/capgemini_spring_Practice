@@ -1,0 +1,16 @@
+package com.cg.web;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ViewEmpController {
+	private IEmpService service;
+	@GetMapping("viewbydept/{dname}")
+	public List<Emp> viewEmployee(@PathVariable("dname")String dept){
+		return service.viewEmployee(dept);
+	}
+	
+}

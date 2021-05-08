@@ -1,0 +1,11 @@
+package com.cg.client;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Component;
+
+@Component
+@ComponentScan("com")
+// under com package having annotated component find classes
+public class MyConfiguration {
+
+}

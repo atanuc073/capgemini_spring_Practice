@@ -1,0 +1,42 @@
+package com.cg.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cg.dao.IAccountDao;
+import com.cg.dto.AccountDto;
+import com.cg.entity.Account;
+import com.cg.exceptions.AccountException;
+import com.cg.exceptions.BalanceException;
+
+@Service("myser")
+public class AccountServiceImpl implements IAccountService{
+	@Autowired
+	private IAccountDao accountdao;
+	@Override
+	public Integer addAccount(AccountDto dto) {
+		// TODO Auto-generated method stub
+		if(dto.getBalance()<=0) {
+			throw new BalanceException("Balance Must be Minimum 1");
+		}
+		Account account = new Account();
+		account.setCustName(dto.getCustomerName());
+		account.setBalance(dto.getBalance());
+		
+		accountdao.save(account);
+		return null;
+	}
+
+	@Override
+	public Account getAccount(int aid) throws AccountException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean transferFund(int fromaid, int toaid, double amount) throws AccountException, BalanceException {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}
